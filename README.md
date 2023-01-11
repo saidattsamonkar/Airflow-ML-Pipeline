@@ -6,6 +6,12 @@ Welcome to Astronomer! This project was generated after you ran 'astro dev init'
 Project Contents
 ================
 
+## Project DAG
+![DAG](https://github.com/saidattsamonkar/Airflow-ML-Pipeline/assets/grant_chart.png)
+
+## Grant Chart
+![DAG](https://github.com/saidattsamonkar/Airflow-ML-Pipeline/assets/dag.png)
+
 Your Astro project contains the following files and folders:
 
 - dags: This folder contains the Python files for your Airflow DAGs. By default, this directory includes an example DAG that runs every 30 minutes and simply prints the current date. It also includes an empty 'my_custom_function' that you can fill out to execute Python code.
