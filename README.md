@@ -7,10 +7,10 @@ Project Contents
 ================
 
 ## Project DAG
-![DAG](https://github.com/saidattsamonkar/Airflow-ML-Pipeline/assets/grant_chart.png)
+![DAG](https://github.com/saidattsamonkar/Airflow-ML-Pipeline/assets/dag.png)
 
 ## Grant Chart
-![DAG](https://github.com/saidattsamonkar/Airflow-ML-Pipeline/assets/dag.png)
+![GRANT CHART](https://github.com/saidattsamonkar/Airflow-ML-Pipeline/assets/grant_chart.png)
 
 Your Astro project contains the following files and folders:
 
