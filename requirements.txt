@@ -1,0 +1,8 @@
+astro-sdk-python[amazon,snowflake,amazon-s3] >= 1.1.0
+apache-airflow[amazon]
+apache-airflow-providers-amazon
+boto3
+spark
+pyspark
+pandas
+numpy
