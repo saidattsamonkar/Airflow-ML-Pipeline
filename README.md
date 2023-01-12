@@ -46,5 +46,5 @@ Add your AWS access keys by updating ```os.environ["AWS_ACCESS_KEY_ID"]``` and `
 Run command ```astro dev start``` inside the VSCode terminal or after cd into the project directory. This command will spin up 3 Docker containers on your machine, each for a different Airflow component.
 
 **5. Start Airflow** <br />
-Run command ```astro dev start``` inside the VSCode terminal or after cd into the project directory. This command will spin up 3 Docker containers on your machine, each for a different Airflow component. Verify that all 3 Docker containers were created by running 'docker ps'. Acess the Airflow UI at http://localhost:8080/ and find the ```ml-pipeline`` under Dags. Finally toggle the dag on and trigger the dag.
+Run command ```astro dev start``` inside the VSCode terminal or after cd into the project directory. This command will spin up 3 Docker containers on your machine, each for a different Airflow component. Verify that all 3 Docker containers were created by running 'docker ps'. Acess the Airflow UI at http://localhost:8080/ and find the ```ml-pipeline``` under Dags. Finally toggle the dag on and trigger the dag.
 
