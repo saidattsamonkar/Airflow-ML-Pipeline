@@ -16,7 +16,7 @@ The steps in the Pipeline are:
 The running times of each task is displayed in the chart
 ![GRANT CHART](https://github.com/saidattsamonkar/Airflow-ML-Pipeline/blob/main/assets/grant_chart.png)
 
-##Steps to run this project locally
+## Steps to run this project locally
 
 1. Upload Data to an S3 bucket
 Create an S3 bucket and upload the data file from https://archive.ics.uci.edu/ml/datasets/HCV+data. Creae an IAM User with ```AmazonS3FullAccess``` previledge in AWS and download the access keys for the User.
