@@ -18,7 +18,7 @@ The run times of each task is displayed in the chart
 
 ## Steps to run this project locally
 
-1. Upload Data to an S3 bucket \n
+1. Upload Data to an S3 bucket <br />
 Create an S3 bucket and upload the data file from https://archive.ics.uci.edu/ml/datasets/HCV+data. Creae an IAM User with ```AmazonS3FullAccess``` previledge in AWS and download the access keys for the User.
 
 
