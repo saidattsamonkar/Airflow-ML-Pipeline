@@ -1,7 +1,7 @@
 # Airflow PySpark ML Pipeline 
 
 ## Introduction
-This Airflow project is created using Astro CLI. The aim is to develop a ML pipeline for detecting presence and detacting stages of Hepatitis-C Virus (https://archive.ics.uci.edu/ml/datasets/HCV+data). <br /><br />
+This Airflow project is created using Astro CLI. The aim is to develop a ML pipeline for detecting presence and/or detecting stages of Hepatitis-C Virus (https://archive.ics.uci.edu/ml/datasets/HCV+data). <br /><br />
 
 ## Project DAG
 ![DAG](https://github.com/saidattsamonkar/Airflow-ML-Pipeline/blob/main/assets/dag.png) <br /><br />
