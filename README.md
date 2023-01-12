@@ -1,11 +1,13 @@
 # Airflow PySpark ML Pipeline 
 
 ## Introduction
-This Airflow project is created using Astro CLI. The aim is to develop a ML pipeline for detecting presence or stages of Hepatitis-C Virus. The steps in the Pipeline are:
+This Airflow project is created using Astro CLI. The aim is to develop a ML pipeline for detecting presence or stages of Hepatitis-C Virus (https://archive.ics.uci.edu/ml/datasets/HCV+data). 
+
+The steps in the Pipeline are:
 - Clean and transform data from an Amazon S3 bucket
 - Train 4 Machine Learning Models in parallel (Logistic Regression, Decision Tree, Naive Bayes, Random Forest)
 - Evaluate all models on Key metrics (accuracy, precision, recall, F1 score)
-- Model Selection
+- Model Selection and update model on Amazon S3
 
 ## Project DAG
 ![DAG](https://github.com/saidattsamonkar/Airflow-ML-Pipeline/blob/main/assets/dag.png)
@@ -14,20 +16,14 @@ This Airflow project is created using Astro CLI. The aim is to develop a ML pipe
 The running times of each task is displayed in the chart
 ![GRANT CHART](https://github.com/saidattsamonkar/Airflow-ML-Pipeline/blob/main/assets/grant_chart.png)
 
-Your Astro project contains the following files and folders:
+##Steps to run this project locally
 
-- dags: This folder contains the Python files for your Airflow DAGs. By default, this directory includes an example DAG that runs every 30 minutes and simply prints the current date. It also includes an empty 'my_custom_function' that you can fill out to execute Python code.
-- Dockerfile: This file contains a versioned Astro Runtime Docker image that provides a differentiated Airflow experience. If you want to execute other commands or overrides at runtime, specify them here.
-- include: This folder contains any additional files that you want to include as part of your project. It is empty by default.
-- packages.txt: Install OS-level packages needed for your project by adding them to this file. It is empty by default.
-- requirements.txt: Install Python packages needed for your project by adding them to this file. It is empty by default.
-- plugins: Add custom or community plugins for your project to this file. It is empty by default.
-- airflow_settings.yaml: Use this local-only file to specify Airflow Connections, Variables, and Pools instead of entering them in the Airflow UI as you develop DAGs in this project.
+1. Upload Data to an S3 bucket
+Create an S3 bucket and upload the data file from https://archive.ics.uci.edu/ml/datasets/HCV+data. Creae an IAM User with ```AmazonS3FullAccess``` previledge in AWS and download the access keys for the User.
 
-Deploy Your Project Locally
-===========================
 
-1. Start Airflow on your local machine by running 'astro dev start'.
+
+ Start Airflow on your local machine by running 'astro dev start'.
 
 This command will spin up 3 Docker containers on your machine, each for a different Airflow component:
 
@@ -35,11 +31,11 @@ This command will spin up 3 Docker containers on your machine, each for a differ
 - Webserver: The Airflow component responsible for rendering the Airflow UI
 - Scheduler: The Airflow component responsible for monitoring and triggering tasks
 
-2. Verify that all 3 Docker containers were created by running 'docker ps'.
+ Verify that all 3 Docker containers were created by running 'docker ps'.
 
 Note: Running 'astro dev start' will start your project with the Airflow Webserver exposed at port 8080 and Postgres exposed at port 5432. If you already have either of those ports allocated, you can either stop your existing Docker containers or change the port.
 
-3. Access the Airflow UI for your local Airflow project. To do so, go to http://localhost:8080/ and log in with 'admin' for both your Username and Password.
+ Access the Airflow UI for your local Airflow project. To do so, go to http://localhost:8080/ and log in with 'admin' for both your Username and Password.
 
 You should also be able to access your Postgres Database at 'localhost:5432/postgres'.
 
