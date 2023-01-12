@@ -17,6 +17,7 @@ This Airflow project is created using Astro CLI. The aim is to develop a ML pipe
  - Naive Bayes Classifier
  - Random Forest Classifier
  <br /><br />
+ 
 **3. Evaluate Models** <br /> 
  This task load the predictions of all 4 models and generate key metrics (accuracy, precision, recall, F1 score) to create ```evaluation_summary.csv``` which is then uploaded to the S3 bucket.<br /><br />
  ![Evaluation Summary]( https://github.com/saidattsamonkar/Airflow-ML-Pipeline/blob/main/assets/evaluation_summary.png)
@@ -31,22 +32,22 @@ The run times of each task is displayed in the chart <br /><br />
 <br /><br />
 ## Steps to run this project locally <br />
 
-**1. Upload Data to an S3 bucket** <br /><br />
+**1. Upload Data to an S3 bucket** <br />
 Create an S3 bucket and upload the data file from https://archive.ics.uci.edu/ml/datasets/HCV+data. Creae an IAM User with ```AmazonS3FullAccess``` previledge in AWS and download the access keys for the User.
 <br /><br />
-**2. Download Astro CLI** <br /><br />
+**2. Download Astro CLI** <br />
 Follow the instructions on the astronomer web page - https://docs.astronomer.io/astro/cli/install-cli
 <br /><br />
-**3. Download Docker** <br /><br />
+**3. Download Docker** <br />
 Download (https://docs.docker.com/desktop/install/mac-install/) and start Docker Desktop
 <br /><br />
-**4. Clone Repsitory** <br /><br />
+**4. Clone Repsitory** <br />
 Clone this repository using the command ```$ git clone https://github.com/saidattsamonkar/Airflow-ML-Pipeline```. Open the project with VSCode (preferred).
 Add your AWS access keys by updating ```os.environ["AWS_ACCESS_KEY_ID"]``` and ```os.environ["AWS_SECRET_ACCESS_KEY"]``` in ```\Dags\main.py```
 <br /><br />
-**5. Start Airflow** <br /><br />
+**5. Start Airflow** <br />
 Run command ```astro dev start``` inside the VSCode terminal or after cd into the project directory. This command will spin up 3 Docker containers on your machine, each for a different Airflow component.
 <br /><br />
-**5. Start Airflow** <br /><br />
+**5. Start Airflow** <br />
 Run command ```astro dev start``` inside the VSCode terminal or after cd into the project directory. This command will spin up 3 Docker containers on your machine, each for a different Airflow component. Verify that all 3 Docker containers were created by running the command ```docker ps```. Acess the Airflow UI at http://localhost:8080/ and find the ```ml-pipeline``` under Dags. Finally toggle the dag on and trigger the dag.
 
