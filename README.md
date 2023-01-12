@@ -35,30 +35,16 @@ Create an S3 bucket and upload the data file from https://archive.ics.uci.edu/ml
 **2. Download Astro CLI** <br />
 Follow the instructions on the astronomer web page - https://docs.astronomer.io/astro/cli/install-cli
 
+**3. Download Docker** <br />
+Download (https://docs.docker.com/desktop/install/mac-install/) and start Docker Desktop
 
+**4. Clone Repsitory** <br />
+Clone this repository using the command ```$ git clone https://github.com/saidattsamonkar/Airflow-ML-Pipeline```. Open the project with VSCode (preferred).
+Add your AWS access keys by updating ```os.environ["AWS_ACCESS_KEY_ID"]``` and ```os.environ["AWS_SECRET_ACCESS_KEY"]``` in ```\Dags\main.py```
 
- Start Airflow on your local machine by running 'astro dev start'.
+**5. Start Airflow** <br />
+Run command ```astro dev start``` inside the VSCode terminal or after cd into the project directory. This command will spin up 3 Docker containers on your machine, each for a different Airflow component.
 
-This command will spin up 3 Docker containers on your machine, each for a different Airflow component:
+**5. Start Airflow** <br />
+Run command ```astro dev start``` inside the VSCode terminal or after cd into the project directory. This command will spin up 3 Docker containers on your machine, each for a different Airflow component. Verify that all 3 Docker containers were created by running 'docker ps'. Acess the Airflow UI at http://localhost:8080/ and find the ```ml-pipeline`` under Dags. Finally toggle the dag on and trigger the dag.
 
-- Postgres: Airflow's Metadata Database
-- Webserver: The Airflow component responsible for rendering the Airflow UI
-- Scheduler: The Airflow component responsible for monitoring and triggering tasks
-
- Verify that all 3 Docker containers were created by running 'docker ps'.
-
-Note: Running 'astro dev start' will start your project with the Airflow Webserver exposed at port 8080 and Postgres exposed at port 5432. If you already have either of those ports allocated, you can either stop your existing Docker containers or change the port.
-
- Access the Airflow UI for your local Airflow project. To do so, go to http://localhost:8080/ and log in with 'admin' for both your Username and Password.
-
-You should also be able to access your Postgres Database at 'localhost:5432/postgres'.
-
-Deploy Your Project to Astronomer
-=================================
-
-If you have an Astronomer account, pushing code to a Deployment on Astronomer is simple. For deploying instructions, refer to Astronomer documentation: https://docs.astronomer.io/cloud/deploy-code/
-
-Contact
-=======
-
-The Astronomer CLI is maintained with love by the Astronomer team. To report a bug or suggest a change, reach out to our support team: https://support.astronomer.io/
