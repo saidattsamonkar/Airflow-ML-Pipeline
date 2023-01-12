@@ -1,12 +1,12 @@
 # Airflow PySpark ML Pipeline 
 
-## Introduction <br /><br />
+## Introduction <br />
 This Airflow project is created using Astro CLI. The aim is to develop a ML pipeline for detecting presence and/or detecting stages of Hepatitis-C Virus (https://archive.ics.uci.edu/ml/datasets/HCV+data). <br /><br /><br />
 
-## Project DAG <br /><br />
+## Project DAG <br />
 ![DAG](https://github.com/saidattsamonkar/Airflow-ML-Pipeline/blob/main/assets/dag.png) <br /><br /><br />
 
-## Steps in the Pipeline <br /><br />
+## Steps in the Pipeline <br />
 **1. Clean and transform** <br />
  This task fetches data from an Amazon S3 bucket using boto 3. Clean and transform the data (handling null values, cleaning string values, encoding categorical values etc) and split the data into train and test sets. Upload the ```train.csv``` and ```test.csv``` datasets to the Amazon S3 bucket
  <br /><br />
@@ -25,11 +25,11 @@ This Airflow project is created using Astro CLI. The aim is to develop a ML pipe
 **4. Model Selection** <br /> 
  This task reads the ```evaluation_summary.csv``` file from the S3 bucket and selects a model depending on the model selection strategy. This model is then made available as a compressed file on the S3 bucket called ```final_model.tar.gz``` <br /><br />
 <br /><br />
-## Grant Chart <br /><br />
+## Grant Chart <br />
 The run times of each task is displayed in the chart <br /><br />
 ![GRANT CHART](https://github.com/saidattsamonkar/Airflow-ML-Pipeline/blob/main/assets/grant_chart.png) <br /><br />
 <br /><br />
-## Steps to run this project locally <br /><br />
+## Steps to run this project locally <br />
 
 **1. Upload Data to an S3 bucket** <br /><br />
 Create an S3 bucket and upload the data file from https://archive.ics.uci.edu/ml/datasets/HCV+data. Creae an IAM User with ```AmazonS3FullAccess``` previledge in AWS and download the access keys for the User.
