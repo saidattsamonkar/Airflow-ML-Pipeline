@@ -6,7 +6,7 @@ This Airflow project is created using Astro CLI. The aim is to develop a ML pipe
 ## Project DAG
 ![DAG](https://github.com/saidattsamonkar/Airflow-ML-Pipeline/blob/main/assets/dag.png)
 
-The steps in the Pipeline are:
+**The steps in the Pipeline are:**
 - Clean and transform data from an Amazon S3 bucket
 - Train 4 Machine Learning Models in parallel (Logistic Regression, Decision Tree, Naive Bayes, Random Forest)
 - Evaluate all models on Key metrics (accuracy, precision, recall, F1 score)
