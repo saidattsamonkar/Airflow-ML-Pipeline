@@ -15,8 +15,8 @@ import os
 os.system('export JAVA_HOME= "$(dirname $(dirname $(readlink -f $(which java))))"')
 
 #Setting AWS User secret access keys
-os.environ["AWS_ACCESS_KEY_ID"] = "AKIA423CVPKMS3WNYR7D"
-os.environ["AWS_SECRET_ACCESS_KEY"] = "aLqqh4yLWycsdtLKAsnWATxL37RTl6e0hqDhI/Ne"
+os.environ["AWS_ACCESS_KEY_ID"] = "YOUR_SECRET_KEY_ID"
+os.environ["AWS_SECRET_ACCESS_KEY"] = "YOUR_SECRET_ACCESS_KEY"
 
 default_args= {
     'owner': 'Saidatt S Amonkar',
