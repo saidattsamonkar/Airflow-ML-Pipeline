@@ -23,7 +23,7 @@ This Airflow project is created using Astro CLI. The aim is to develop a ML pipe
 **4. Model Selection** <br /> 
  This task reads the ```evaluation_summary.csv``` file from the S3 bucket and selects a model depending on the model selection strategy. This model is then made available as a compressed file on the S3 bucket called ```final_model.tar.gz``` <br /><br />
 
-### Grant Chart
+## Grant Chart
 The run times of each task is displayed in the chart
 ![GRANT CHART](https://github.com/saidattsamonkar/Airflow-ML-Pipeline/blob/main/assets/grant_chart.png) <br /><br />
 
