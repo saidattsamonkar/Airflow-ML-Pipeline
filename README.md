@@ -7,10 +7,16 @@ This Airflow project is created using Astro CLI. The aim is to develop a ML pipe
 ![DAG](https://github.com/saidattsamonkar/Airflow-ML-Pipeline/blob/main/assets/dag.png)
 
 ### Steps in the Pipeline
-- Clean and transform data from an Amazon S3 bucket
-- Train 4 Machine Learning Models in parallel (Logistic Regression, Decision Tree, Naive Bayes, Random Forest)
-- Evaluate all models on Key metrics (accuracy, precision, recall, F1 score)
-- Model Selection and update model on Amazon S3
+1. Clean and transform <br />
+ Fetch data from an Amazon S3 bucket using boto 3. Clean and transform the data (handling null values, cleaning string values, encoding categorical values etc) and split the data into train and test sets. Upload the train.csv and test.csv datasets to the Amazon S3 bucket
+2. Train Machine Learning Models <br /> 
+ We run 4 tasks in parallel that loads the train.csv file and trains 4 ML models using PySpark ML. The steps also load the test.csv files and generate key metrics for the models (accuracy, precision, recall, F1 score) and upload
+ - Logistic Regression
+ - Decision Tree Classifier
+ - Naive Bayes Classifier
+ - Random Forest Classifier
+3. Evaluate Models all models on Key metrics (accuracy, precision, recall, F1 score)
+5. Model Selection and update model on Amazon S3
 
 ### Grant Chart
 The run times of each task is displayed in the chart
