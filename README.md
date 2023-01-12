@@ -1,7 +1,11 @@
-Overview
-========
+# Airflow PySpark ML Pipeline 
 
-Welcome to Astronomer! This project was generated after you ran 'astro dev init' using the Astronomer CLI. This readme describes the contents of the project, as well as how to run Apache Airflow on your local machine.
+## Introduction
+This Airflow project is created using Astro CLI. The aim is to develop a ML pipeline for detecting presence or stages of Hepatitis-C Virus. The steps in the Pipeline are:
+- Clean and transform data from an Amazon S3 bucket
+- Train 4 Machine Learning Models in parallel (Logistic Regression, Decision Tree Classifier, Naive Bayes Classifier, Random Forest Classifier)
+- Evaluate all models on Key metrics (accuracy, precision, recall, F1 score)
+- Model Selection
 
 Project Contents
 ================
