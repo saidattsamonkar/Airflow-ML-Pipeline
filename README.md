@@ -21,7 +21,7 @@ This Airflow project is created using Astro CLI. The aim is to develop a ML pipe
 **3. Evaluate Models** <br /> 
  This task load the predictions of all 4 models and generate key metrics (accuracy, precision, recall, F1 score) to create ```evaluation_summary.csv``` which is then uploaded to the S3 bucket.<br /><br />
  
- <img src="https://github.com/saidattsamonkar/Airflow-ML-Pipeline/blob/main/assets/evaluation_summary.png)" width="200" height="100" />
+ <img src="https://github.com/saidattsamonkar/Airflow-ML-Pipeline/blob/main/assets/evaluation_summary.png" width="200" height="100" />
  
 <br /><br />
  
